@@ -1,0 +1,44 @@
+p, h1, h2, select {
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+}
+p {
+    font-size: 1.35em;
+    font-weight: bold;
+}
+div.mybox{
+    margin: 20px 5px 20px 5px;
+    border: 30px solid lemonchiffon;
+    padding: 2px 600px 50px 30px;
+    background-color: ivory;
+    border-radius: 5px;
+}
+h2.heading {
+    border: 5px solid khaki;
+    padding: 2px ;
+    background-color: khaki;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+select, input {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 2px;
+}
+p.one {
+    border-left: 5px solid khaki;
+    padding: 2px 20px 20px 20px;
+    border-radius: 5px;
+}
+p.radioSelect {
+    padding: 15px;
+    margin: 0 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size:15px;
+}
+p.submit {
+    padding: 20px;
+    font-size: 20px;
+}
+

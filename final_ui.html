@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" >
+        <!--link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans+Condensed:300'rel='stylesheet' type='text/css'-->
+    </head>
+
+    <body>
+        <div class="mybox">
+        <h2 class="heading">Bowtie2- align sequence reads to reference genome</h2>
+        <!--form action="/action_page.php"-->
+        <p class="one">Select library type:
+        <select class="ui dropdown">
+        <option value="">Single-end</option>
+        <option value ="1">Paired</option></select></p>
+
+        <form method="post" enctype="multipart/form-data" action="db_test.py">
+            <p class="one">Please upload files: <input type="file" name="file1">
+            <input type="file" name="file2"></p>
+        </form>
+        <p class="one">Select reference genome:
+        <select class="ui dropdown">
+        <option value="">Human (Homo sapiens): hg19 </option>
+        <option value="1">Human (Homo sapiens): hg38 </option>
+        <option value="2">Mouse (Mus musculus): mm9</option>
+        <option value="3">Mouse (Mus musculus): mm10</option></select></p>
+
+        <p class="one">Bowtie analysis mode:
+        <select class="ui dropdown">
+        <option value="">Default </option>
+        <option value="1">End-to-end alignment</option>
+        <option value="2">Local alignment</option></select></p>
+
+        <form>
+            <p class="radioSelect">End-to-end: <input type="radio" name="End-to-end alignment" value="very fast" checked> --very-fast
+            <input type="radio" name="End-to-end alignment" value="fast"> --fast
+            <input type="radio" name="End-to-end alignment" value="sensitive"> --sensitive
+            <input type="radio" name="End-to-end alignment" value="very sensitive"> --very-sensitive<br>
+            Local: <input type="radio" name="Local" value="very fast local" checked> --very-fast-local
+            <input type="radio" name="Local" value="fast local"> --fast-local
+            <input type="radio" name="Local" value="sensitive local"> --sensitive-local
+            <input type="radio" name="Local" value="very sensitive local"> --very-sensitive-local<br></p>
+        </form>
+
+        <p class="submit">
+            <input type="submit" value="Submit">
+        </p>
+            <!--script src="upload.js"></script-->
+        </div>
+    </body>
+</html>
+
