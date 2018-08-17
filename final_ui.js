@@ -10,9 +10,11 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#paired').hide()
     $('#pairedselect').click(function()
-        {$('#paired').show()})
+        {$('#paired').show()
+        $('#single').val('')})
     $('#singleselect').click(function()
-        {$('#paired').hide()})
+        {$('#paired').hide()
+        $('#single').val('')})
 })
 
 //function to hide and show bowtie analysis options.
@@ -28,5 +30,28 @@ $(document).ready(function() {
     $('#default').click(function()
         {$('#mode1').hide()
         $('#mode2').hide()})
+})
+//function to get file name and check file extension
+$(document).ready(function() {
+    $('input[type="file"]').change(function(e) {
+        var fileName = e.target.files[0].name;
+        alert('The file"'+fileName+ '" has been selected.');
+        //});
+        var fileExtension = fileName.split('.').pop();
+        var validExtension = 'fq';
+        if (fileExtension != validExtension) {
+            $('input[type="file"]').val('')
+            alert("Invalid file type. Upload file in fastq format");}
+        });
+});
+//function to validate file upload
+$(document).ready(function() {
+    $('#btnsubmit').click(function()
+        {alert("clicked submit")
+        if(($('#single').val() == '') || ($('#paired').val() == '')){
+            $('#single').val('')
+            $('#paired').val('')
+            alert("Upload files to check alignment");}
+    })
 })
 

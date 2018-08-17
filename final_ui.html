@@ -19,7 +19,7 @@
         <option value ="1" id="pairedselect">Paired</option></select></p>
 
         <form method="post" enctype="multipart/form-data" action="db_test.py" id="file_upload">
-            <p class="one">Please upload files: <input type="file" name="file1" id="single">
+            <p class="one">Please upload files: <input type="file" class = "required" name="file1" id="single">
             <input type="file" name="file2" id="paired"></p>
         </form></div>
 
@@ -48,11 +48,11 @@
             <input type="radio" name="Local" value="sensitive local"> --sensitive-local
             <input type="radio" name="Local" value="very sensitive local"> --very-sensitive-local<br></p>
         </form>
+
         <p class="submit">
-            <input type="submit" value="Submit">
+            <input type="button" value="Submit" id="btnsubmit">
         </p>
         </div>
     </body>
 </html>
-
 
