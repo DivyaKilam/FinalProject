@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="final_ui.js"></script>
+        <script type="text/javascript" language="javascript" src="jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="style.css" >
+    </head>
+
+    <body>
+        <form enctype="multipart/form-data" id="myForm"  action="./final_display.cgi" method="post">
+        <div class="mybox">
+        <h2 class="heading">Bowtie2- align sequence reads to reference genome</h2>
+        <!--fiorm actiion="/action_page.php"-->
+        <div class="ui dropdown">
+        <p class="one">Select library type:
+        <!--select class="button dropdown" id="libraryselector"-->
+        <select id="libraryselector" name="libraryselector">
+        <option value="0" id="singleselect">Single-end</option>
+        <option value ="1" id="pairedselect">Paired</option></select></p>
+
+        <!--<div method="post" enctype="multipart/form-data" action="./final_display.cgi" id="file_upload"> -->
+        <div>
+            <p class="one">Please upload files: <input type="file" class = "required" name="file1" id="single">
+            <input type="file" name="file2" id="paired"></p>
+        <!--/form--></div>
+
+        <div class="ui dropdown">
+        <p class="one">Select reference genome:
+        <select id= "refgenome" name="refgenome">
+        <option value="0">Human (Homo sapiens): GRCh38 </option>
+        <option value="1">Mouse (Mus musculus): GRCm38</option></select></p></div>
+
+        <div class="ui dropdown">
+        <p class="one">Bowtie analysis mode:
+        <select id="bowtieanalysis" name="bowtieanalysis">
+        <option value="0" id="default">Default </option>
+        <option value="1" id="endtoend">End-to-end alignment</option>
+        <option value="2" id="local">Local alignment</option></select></p></div>
+
+        <div>
+            <p class="radioSelect" id="mode1" name="end_to_end">End-to-end: <input type="radio" name="end_to_end" value="very fast" checked> --very-fast
+            <input type="radio" name="end_to_end" value="fast"> --fast
+            <input type="radio" name="end_to_end" value="sensitive"> --sensitive
+            <input type="radio" name="end_to_end" value="very sensitive"> --very-sensitive<br></p>
+            <p class="radioSelect" id="mode2">Local: <input type="radio" name="Local" value="very fast local" checked> --very-fast-local
+            <input type="radio" name="Local" value="fast local"> --fast-local
+            <input type="radio" name="Local" value="sensitive local"> --sensitive-local
+            <input type="radio" name="Local" value="very sensitive local"> --very-sensitive-local<br></p>
+        </div>
+        <p class="submit">
+            <input type="button" value="Submit" id="btnsubmit">
+        </p>
+        </div>
+        </form>
+        <p id ="answer"></p>
+    </body>
+</html>
+
+
