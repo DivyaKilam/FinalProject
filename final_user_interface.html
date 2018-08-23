@@ -22,7 +22,7 @@
 
         <!--<div method="post" enctype="multipart/form-data" action="./final_display.cgi" id="file_upload"> -->
         <div>
-            <p class="one">Please upload files: <input type="file" class = "required" name="file1" id="single">
+            <p class="one">Uploaded files: <input type="file" class = "required" name="file1" id="single">
             <input type="file" name="file2" id="paired"></p>
         <!--/form--></div>
 
@@ -40,15 +40,16 @@
         <option value="2" id="local">Local alignment</option></select></p></div>
 
         <div>
-            <p class="radioSelect" id="mode1" name="end_to_end">End-to-end: <input type="radio" name="end_to_end" value="very fast" checked> --very-fast
+            <p class="radioSelect" id="mode1" name="end_to_end">End-to-end: <input type="radio" name="end_to_end" value="very_fast" checked> --very-fast
             <input type="radio" name="end_to_end" value="fast"> --fast
             <input type="radio" name="end_to_end" value="sensitive"> --sensitive
-            <input type="radio" name="end_to_end" value="very sensitive"> --very-sensitive<br></p>
-            <p class="radioSelect" id="mode2">Local: <input type="radio" name="Local" value="very fast local" checked> --very-fast-local
-            <input type="radio" name="Local" value="fast local"> --fast-local
-            <input type="radio" name="Local" value="sensitive local"> --sensitive-local
-            <input type="radio" name="Local" value="very sensitive local"> --very-sensitive-local<br></p>
+            <input type="radio" name="end_to_end" value="very_sensitive"> --very-sensitive<br></p>
+            <p class="radioSelect" id="mode2">Local: <input type="radio" name="Local" value="very_fast_local" checked> --very-fast-local
+            <input type="radio" name="Local" value="fast_local"> --fast-local
+            <input type="radio" name="Local" value="sensitive_local"> --sensitive-local
+            <input type="radio" name="Local" value="very_sensitive_local"> --very-sensitive-local<br></p>
         </div>
+
         <p class="submit">
             <input type="button" value="Submit" id="btnsubmit">
         </p>
@@ -57,5 +58,4 @@
         <p id ="answer"></p>
     </body>
 </html>
-
 

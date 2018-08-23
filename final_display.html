@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+      <p>
+        <style>
+        table, th, td {border: 1px solid black;}
+        table td.shrink {white-space: nowrap;}
+        table {border-collapse: collapse;}
+        table, th, td {text-align: left;}
+        table, th, td {padding: 15px;}
+        </style>
+        <table style="width:50%">
+            <tr>
+              <td><b>REFERENCE GENOME:</b> {{referenceterm}} <br>
+                  <b>LIBRARY TYPE:</b>     {{libraryterm}}   <br>
+                  <b>BOWTIE ANALYSIS TYPE:</b>  {{bowtie_analysis_type}}    <br>
+              </td>
+        <table style="width:50%">
+            <tr>
+                 <th>ALIGNMENT RATES RESULT</th>
+            </tr>
+            {%for row in results%}
+            <tr>
+               <!-- <td align="center" style="font-size:1.25em;">
+                <p class="sansserif"> -->
+                <td> {{row[0]}} </td>
+                </p>
+            </tr>
+                {%endfor%}
+        </table>
+    </body>
+</html>
+

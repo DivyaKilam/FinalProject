@@ -8,15 +8,15 @@ p {
 }
 div.mybox{
     margin: 20px 5px 20px 5px;
-    border: 30px solid lemonchiffon;
+    border: 30px solid lightcyan;
     padding: 2px 600px 50px 30px;
-    background-color: ivory;
+    background-color: floralwhite;
     border-radius: 5px;
 }
 h2.heading {
-    border: 5px solid khaki;
+    border: 5px solid powderblue;
     padding: 2px ;
-    background-color: khaki;
+    background-color: lightcyan;
     border-radius: 5px;
     letter-spacing: 2px;
 }
@@ -26,7 +26,7 @@ select, input {
     padding: 2px;
 }
 p.one {
-    border-left: 5px solid khaki;
+    border-left: 5px solid powderblue;
     padding: 2px 20px 20px 20px;
     border-radius: 5px;
 }
@@ -41,5 +41,5 @@ p.submit {
     padding: 20px;
     font-size: 20px;
 }
-
-
+body{font-family:Verdana;}
+#Serialized{color:#fa4b2a}

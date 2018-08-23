@@ -35,7 +35,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('input[type="file"]').change(function(e) {
         var fileName = e.target.files[0].name;
-        alert('The file"'+fileName+ '" has been selected.');
+        //alert('The file"'+fileName+ '" has been selected.');
         //});
         var fileExtension = fileName.split('.').pop();
         var validExtension = 'fq';
@@ -48,9 +48,10 @@ $(document).ready(function() {
 //function to validate file upload
 $(document).ready(function() {
     $('#btnsubmit').click(function()
-        {alert("clicked submit")
+        {//alert("clicked submit")
         if(($('#single').val() == '') || (($('#paired').val() == '') && ($('#libraryselector').val()=='1'))){
             $('#single').val('')
+            $('#paired').val('')
             $('#paired').val('')
             alert("Upload files to check alignment");}
 //            return false;
@@ -61,26 +62,11 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#btnsubmit').click(function() {
 //        var encoded=($('#libraryselector').val()+ ($('#refgenome').val())+ ($('#bowtieanalysis').val())+ ($("input[type='radio']:checked").val()));
-    alert('start processing');
+    //alert('start processing');
     //var library=document.getElementById('#libraryselector').value;
     //alert('library');    
     document.getElementById("myForm").submit();
 
-//==$.ajax({
-    //==    url:'./final.cgi',
-    //==    dataType: 'json',
-    //==    method: 'post',
-    //==    data: {library:'library'},
-    //==    success: function(response) {
-    //==        $("#answer").html(response);
-    //==    }
-    //==});
-//   return false;
-
-    //$('#Serialized').text('The Serialized form of input fields is:' + encoded);
     });
 });
-
-
-
 
